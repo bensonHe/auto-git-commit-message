@@ -209,3 +209,8 @@ MIT License
 
 - [阿里云百炼](https://dashscope.aliyun.com/)
 - [Conventional Commits](https://www.conventionalcommits.org/) 
+
+
+## 🤝  加个公众号 , 欢迎关注, 一起探索AI小应用
+
+包子的实验室 

@@ -36,9 +36,11 @@ if [ "$2" = "merge" ] || [ "$2" = "squash" ] || [ "$2" = "commit" ]; then
     exit 0
 fi
 
-# 检查是否已经有提交信息
-if [ -s "$1" ]; then
-    # 如果已经有提交信息，不覆盖
+# 检查是否已经有实际的提交信息（不包括注释行）
+# 过滤掉以#开头的注释行和空行，检查是否有实际内容
+has_content=$(grep -v '^#' "$1" | grep -v '^[[:space:]]*$' | wc -l)
+if [ "$has_content" -gt 0 ]; then
+    # 如果已经有实际的提交信息，不覆盖
     exit 0
 fi
 
@@ -57,7 +59,12 @@ AI_MESSAGE=$(node "$TOOL_PATH" generate --hook 2>/dev/null)
 
 # 检查是否成功生成
 if [ $? -eq 0 ] && [ -n "$AI_MESSAGE" ]; then
-    echo "$AI_MESSAGE" > "$COMMIT_MSG_FILE"
+    # 将AI生成的提交信息插入到文件开头，保留Git的注释行
+    temp_file=$(mktemp)
+    echo "$AI_MESSAGE" > "$temp_file"
+    echo "" >> "$temp_file"
+    cat "$COMMIT_MSG_FILE" >> "$temp_file"
+    mv "$temp_file" "$COMMIT_MSG_FILE"
     echo "✨ AI生成的提交信息: $AI_MESSAGE"
 else
     echo "⚠️  AI提交信息生成失败，请手动输入提交信息"
