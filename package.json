@@ -1,0 +1,38 @@
+{
+  "name": "git-auto-commit-message",
+  "version": "1.0.0",
+  "description": "自动生成Git提交信息的AI工具",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "cli": "node src/cli.js"
+  },
+  "keywords": [
+    "git",
+    "commit",
+    "ai",
+    "auto-commit",
+    "cursor",
+    "vscode",
+    "dashscope",
+    "qianwen"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "simple-git": "^3.20.0",
+    "openai": "^4.20.1",
+    "dashscope": "^1.0.1",
+    "commander": "^11.1.0",
+    "chalk": "^4.1.2",
+    "inquirer": "^8.2.6",
+    "ora": "^5.4.1",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.54.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 

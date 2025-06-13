@@ -1,0 +1,9 @@
+{
+  "aiProvider": "dashscope",
+  "dashscopeApiKey": "",
+  "model": "qwen-turbo",
+  "language": "zh-CN",
+  "style": "conventional",
+  "maxTokens": 102,
+  "temperature": 0.3
+} 
