@@ -215,4 +215,4 @@ MIT License
 
 包子的实验室 
 ![公众号][arch]
-[arch]: ./image/gzh.png "公众号图片"
+[arch]: ./image/gzh.jpg "公众号图片"
