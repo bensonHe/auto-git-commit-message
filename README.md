@@ -211,8 +211,14 @@ MIT License
 - [Conventional Commits](https://www.conventionalcommits.org/) 
 
 
-## 🤝  加个公众号 , 欢迎关注, 一起探索AI小应用
+## 🤝 加个公众号，欢迎关注，一起探索AI小应用
 
-包子的实验室 
-![公众号][arch]
-[arch]: ./image/gzh.jpg "公众号图片"
+**包子的实验室**
+
+<div align="center">
+  <img src="./image/gzh.jpg" alt="公众号二维码" width="300"/>
+</div>
+
+<p align="center">
+  <em>扫描二维码关注公众号，获取更多AI应用技巧</em>
+</p>
