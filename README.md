@@ -214,3 +214,5 @@ MIT License
 ## 🤝  加个公众号 , 欢迎关注, 一起探索AI小应用
 
 包子的实验室 
+![公众号][arch]
+[arch]: ./image/gzh.png "公众号图片"
